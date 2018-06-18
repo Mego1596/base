@@ -12,6 +12,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -26,7 +27,7 @@ public class InsertarTabla2 extends AppCompatActivity implements Response.Listen
     EditText sexo;
     EditText materias;
     RequestQueue request;
-    JsonObjectRequest jsonObjectRequest;
+    JsonRequest jsonObjectRequest;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,13 +45,13 @@ public class InsertarTabla2 extends AppCompatActivity implements Response.Listen
         if(carnet.getText().toString().isEmpty() || nombre.getText().toString().isEmpty() || apellido.getText().toString().isEmpty() || sexo.getText().toString().isEmpty() || materias.getText().toString().isEmpty()){
             Toast.makeText(getApplicationContext(),"Debes llenar todos los campos ",Toast.LENGTH_LONG).show();
         }else{
-            String url ="http://192.168.1.108/ws_insertar_alumno.php?carnet="+ carnet.getText().toString()+
+            String url ="http://192.168.1.10/ws_insertar_alumno.php?carnet="+ carnet.getText().toString()+
                     "&nombre="+nombre.getText().toString()+
                     "&apellido="+apellido.getText().toString()+
                     "&sexo="+sexo.getText().toString()+
                     "&matganadas="+materias.getText().toString();
-
             url=url.replace(" ","%20");
+
             jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,url,null,this,this);
             request.add(jsonObjectRequest);
         }
