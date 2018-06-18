@@ -44,7 +44,7 @@ public class InsertarTabla2 extends AppCompatActivity implements Response.Listen
         if(carnet.getText().toString().isEmpty() || nombre.getText().toString().isEmpty() || apellido.getText().toString().isEmpty() || sexo.getText().toString().isEmpty() || materias.getText().toString().isEmpty()){
             Toast.makeText(getApplicationContext(),"Debes llenar todos los campos ",Toast.LENGTH_LONG).show();
         }else{
-            String url ="http://localhost/ws_insertar_alumno.php?carnet="+ carnet.getText().toString()+
+            String url ="http://192.168.1.108/ws_insertar_alumno.php?carnet="+ carnet.getText().toString()+
                     "&nombre="+nombre.getText().toString()+
                     "&apellido="+apellido.getText().toString()+
                     "&sexo="+sexo.getText().toString()+
