@@ -1,6 +1,5 @@
 package sv.edu.ues.fia.eisi.base;
 
-import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,9 +13,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.JsonRequest;
 import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
 
 import org.json.JSONObject;
 
@@ -34,7 +30,7 @@ public class InsertarTabla2 extends AppCompatActivity implements Response.Listen
         getSupportActionBar().hide();
         setContentView(R.layout.activity_insertar_tabla2);
         carnet = (EditText) findViewById(R.id.editCarnet);
-        nombre= (EditText) findViewById(R.id.editNombre);
+        nombre= (EditText) findViewById(R.id.editNombreMateria);
         apellido = (EditText) findViewById(R.id.editApellido);
         sexo = (EditText) findViewById(R.id.editSexo);
         materias = (EditText) findViewById(R.id.editMateriasGanadas);
@@ -45,13 +41,26 @@ public class InsertarTabla2 extends AppCompatActivity implements Response.Listen
         if(carnet.getText().toString().isEmpty() || nombre.getText().toString().isEmpty() || apellido.getText().toString().isEmpty() || sexo.getText().toString().isEmpty() || materias.getText().toString().isEmpty()){
             Toast.makeText(getApplicationContext(),"Debes llenar todos los campos ",Toast.LENGTH_LONG).show();
         }else{
-            String url ="http://192.168.1.10/ws_insertar_alumno.php?carnet="+ carnet.getText().toString()+
+            String url ="http://192.168.1.113/ws_insertar_alumno.php?carnet="+ carnet.getText().toString()+
                     "&nombre="+nombre.getText().toString()+
                     "&apellido="+apellido.getText().toString()+
                     "&sexo="+sexo.getText().toString()+
                     "&matganadas="+materias.getText().toString();
             url=url.replace(" ","%20");
-
+            jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,url,null,this,this);
+            request.add(jsonObjectRequest);
+        }
+    }
+    public void cargarWebServiceExterno(View v){
+        if(carnet.getText().toString().isEmpty() || nombre.getText().toString().isEmpty() || apellido.getText().toString().isEmpty() || sexo.getText().toString().isEmpty() || materias.getText().toString().isEmpty()){
+            Toast.makeText(getApplicationContext(),"Debes llenar todos los campos ",Toast.LENGTH_LONG).show();
+        }else{
+            String url ="https://go14002.000webhostapp.com//ws_insertar_alumno.php?carnet="+ carnet.getText().toString()+
+                    "&nombre="+nombre.getText().toString()+
+                    "&apellido="+apellido.getText().toString()+
+                    "&sexo="+sexo.getText().toString()+
+                    "&matganadas="+materias.getText().toString();
+            url=url.replace(" ","%20");
             jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,url,null,this,this);
             request.add(jsonObjectRequest);
         }

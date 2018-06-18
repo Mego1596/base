@@ -78,11 +78,37 @@ public class ControlBDHelper {
     protected boolean verificarIntegridad(Object dato, int relacion) throws SQLException {
         switch (relacion) {
             case 1:
-                break;
+                Nota nota= (Nota) dato;
+                String[] id1= {nota.getCarnet(),nota.getCodigo()};
+                abrir();
+                Cursor cursor1 = db.query("nota",null,"codmateria = ? AND carnet = ?",id1,null,null,null,null);
+                if (cursor1.moveToFirst()){
+                    return true;
+                }else {
+                    return false;
+                }
             default:
                 return false;
         }
-        return true;
+    }
+
+
+    public String insertar(Nota notaFinal) {
+        String regInsertados = "Registro Insertado Nº= ";
+        long contador = 0;
+        // verificar que no exista nota
+        if (verificarIntegridad(notaFinal, 1)) {
+            regInsertados = "Error al Insertar el registro, Registro Duplicado. Verificar inserción";
+        } else {
+            ContentValues eva1 = new ContentValues();
+            eva1.put("codmateria",notaFinal.getCodigo());
+            eva1.put("carnet",notaFinal.getCarnet());
+            eva1.put("ciclo",notaFinal.getCiclo());
+            eva1.put("notaFinal", notaFinal.getNotaFinal());
+            contador = db.insert("nota", null, eva1);
+            regInsertados = regInsertados + contador;
+        }
+        return regInsertados;
     }
 }
 /*

@@ -1,9 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="sv.edu.ues.fia.eisi.base.InsertarTabla3">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Carnet"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <EditText
+        android:id="@+id/editCarnetNota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView12"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="24dp" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editCarnetNota"
+        android:layout_centerHorizontal="true"
+        android:text="Codigo de Materia"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="76dp" />
+
+    <EditText
+        android:id="@+id/editCodigoMateriaNota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editCarnetNota"
+        android:layout_below="@+id/textView13"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView13"
+        android:layout_below="@+id/editCodigoMateriaNota"
+        android:text="Numero de CIclo"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <EditText
+        android:id="@+id/editCiclo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editCodigoMateriaNota"
+        android:layout_below="@+id/textView14"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="84dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editCiclo"
+        android:layout_centerHorizontal="true"
+        android:text="Nota Final"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNotaFinal"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="7dp"
+        tools:layout_editor_absoluteY="312dp"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="cargarWebServiceLocal"
+            android:textAllCaps="false"
+            android:text="Guardar Nota Local"
+            />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="cargarWebServiceExterno"
+            android:text="Guardar Nota Externo"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editNotaFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView15"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="number"/>
+
+</RelativeLayout>

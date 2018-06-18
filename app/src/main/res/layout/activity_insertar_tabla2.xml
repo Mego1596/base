@@ -15,7 +15,7 @@
         android:layout_marginTop="12dp"
         android:text="Carnet"
         android:textColor="@android:color/background_dark"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editCarnet"
@@ -36,10 +36,10 @@
         android:layout_marginTop="19dp"
         android:text="Nombre"
         android:textColor="@android:color/background_dark"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editNombre"
+        android:id="@+id/editNombreMateria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -51,12 +51,12 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editNombre"
+        android:layout_below="@+id/editNombreMateria"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
         android:text="Apellido"
         android:textColor="@android:color/background_dark"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editApellido"
@@ -76,7 +76,7 @@
         android:layout_marginTop="18dp"
         android:text="Sexo"
         android:textColor="@android:color/background_dark"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editSexo"
@@ -97,7 +97,7 @@
         android:layout_marginTop="12dp"
         android:text="Materias Ganadas"
         android:textColor="@android:color/background_dark"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editMateriasGanadas"
@@ -109,14 +109,33 @@
         android:inputType="number"
         android:text="0" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/editMateriasGanadas"
-        android:layout_centerHorizontal="true"
-        android:onClick="cargarWebServiceLocal"
-        android:text="Guardar Alumno"
-        android:textAllCaps="false" />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="11dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Guardar_Local"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="cargarWebServiceLocal"
+            android:text="Guardar Alumno Local"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_Guardar_Externo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="cargarWebServiceExterno"
+            android:text="Guardar Alumno Externo"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
 
 </RelativeLayout>

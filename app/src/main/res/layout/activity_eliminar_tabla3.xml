@@ -1,9 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="sv.edu.ues.fia.eisi.base.EliminarTabla3">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:text="Codigo de Materia" />
+
+    <EditText
+        android:id="@+id/CodigoMateria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView23"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView23"
+        android:layout_below="@+id/CodigoMateria"
+        android:layout_marginTop="32dp"
+        android:text="Carnet de Estudiante" />
+
+    <EditText
+        android:id="@+id/CarnetNota"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/CodigoMateria"
+        android:layout_below="@+id/textView24"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CarnetNota"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="17dp"
+        android:text="Ciclo" />
+
+    <EditText
+        android:id="@+id/Ciclo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/CarnetNota"
+        android:layout_below="@+id/textView25"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Ciclo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="13dp"
+        android:text="Nota Final" />
+
+    <EditText
+        android:id="@+id/NotaFinal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Ciclo"
+        android:layout_below="@+id/textView26"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/NotaFinal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="cargarWebServiceLocal"
+            android:text="Eliminar Nota Local" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="cargarWebServiceExterno"
+            android:text="Eliminar Nota Externo" />
+    </LinearLayout>
+</RelativeLayout>
