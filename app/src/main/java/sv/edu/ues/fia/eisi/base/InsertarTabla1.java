@@ -14,12 +14,9 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONObject;
 
 public class InsertarTabla1 extends AppCompatActivity {
-    EditText editNombreestu;
-    EditText editApellido;
-    EditText editCorreo;
-    EditText editDireccion;
-    EditText editUser;
-    EditText editClave;
+    EditText codigoMateria;
+    EditText nombreMateria;
+    EditText unidadesValorativas;
     RequestQueue request;
     JsonObjectRequest jsonObjectRequest;
 
@@ -27,7 +24,9 @@ public class InsertarTabla1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insertar_tabla1);
-
-
+        getSupportActionBar().hide();
+        codigoMateria = (EditText) findViewById(R.id);
+        nombreMateria = (EditText) findViewById(R.id);
+        unidadesValorativas = (EditText) findViewById(R.id);
     }
 }
