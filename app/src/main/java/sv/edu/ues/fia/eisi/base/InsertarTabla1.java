@@ -25,8 +25,8 @@ public class InsertarTabla1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_insertar_tabla1);
         getSupportActionBar().hide();
-        codigoMateria = (EditText) findViewById(R.id);
-        nombreMateria = (EditText) findViewById(R.id);
-        unidadesValorativas = (EditText) findViewById(R.id);
+        //codigoMateria = (EditText) findViewById(R.id);
+        //nombreMateria = (EditText) findViewById(R.id);
+        //unidadesValorativas = (EditText) findViewById(R.id);
     }
 }
