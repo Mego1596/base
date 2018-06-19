@@ -6,137 +6,169 @@
     android:layout_height="match_parent"
     tools:context="sv.edu.ues.fia.eisi.base.MainActivity">
 
-    <Button
-        android:id="@+id/btn_insert_materia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="49dp"
-        android:onClick="lanzarActividad"
-        android:text="Insertar"
-        android:textAllCaps="false"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="63dp" />
-
-    <Button
-        android:id="@+id/btn_delete_materia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn_insert_materia"
-        android:layout_alignBottom="@+id/btn_insert_materia"
-        android:layout_centerHorizontal="true"
-        android:onClick="lanzarActividad"
-        android:text="Eliminar"
-        android:textAllCaps="false"
-        tools:layout_editor_absoluteX="148dp"
-        tools:layout_editor_absoluteY="63dp" />
-
-    <Button
-        android:id="@+id/btn_update_materia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_marginStart="16dp"
-        android:layout_toEndOf="@+id/btn_delete_materia"
-        android:onClick="lanzarActividad"
-        android:text="Actualizar"
-        android:textAllCaps="false"
-        tools:layout_editor_absoluteX="280dp"
-        tools:layout_editor_absoluteY="63dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btn_delete_materia"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:text="Materia" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_delete_materia"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp"
-        android:text="Alumno" />
+        android:text="Materia:" />
 
-    <Button
-        android:id="@+id/btn_insert_alumno"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/btn_insert_materia"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/textView2"
-        android:layout_marginTop="31dp"
-        android:onClick="lanzarActividad"
-        android:text="Insertar"
-        android:textAllCaps="false" />
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout2">
 
-    <Button
-        android:id="@+id/btn_delete_alumno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn_insert_alumno"
-        android:layout_alignBottom="@+id/btn_insert_alumno"
-        android:layout_alignStart="@+id/btn_delete_nota"
-        android:onClick="lanzarActividad"
-        android:text="Eliminar"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_insertar_materia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Insertar"
+            android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btn_update_alumno"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn_delete_alumno"
-        android:layout_alignBottom="@+id/btn_delete_alumno"
-        android:layout_alignStart="@+id/btn_update_materia"
-        android:onClick="lanzarActividad"
-        android:text="Actualizar"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_eliminar_materia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Eliminar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_actualizar_materia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Actualizar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_consultar_materia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Consultar"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_delete_alumno"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="Nota"
-        android:textAllCaps="false" />
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/linearLayout2"
+        android:layout_marginTop="10dp"
+        android:text="Alumno" />
 
-    <Button
-        android:id="@+id/btn_insert_nota"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn_insert_alumno"
         android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout3">
+
+        <Button
+            android:id="@+id/btn_insertar_alumno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Insertar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_eliminar_alumno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Eliminar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_actualizar_alumno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Actualizar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_consultar_alumno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Consultar"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout3"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="17dp"
-        android:onClick="lanzarActividad"
-        android:text="Insertar"
-        android:textAllCaps="false" />
+        android:text="Nota" />
 
-    <Button
-        android:id="@+id/btn_delete_nota"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn_insert_nota"
-        android:layout_alignBottom="@+id/btn_insert_nota"
-        android:layout_alignStart="@+id/btn_delete_materia"
-        android:onClick="lanzarActividad"
-        android:text="Eliminar"
-        android:textAllCaps="false" />
+        android:layout_below="@+id/textView29"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/btn_update_nota"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/btn_delete_nota"
-        android:layout_alignBottom="@+id/btn_delete_nota"
-        android:layout_alignStart="@+id/btn_update_alumno"
-        android:onClick="lanzarActividad"
-        android:text="Actualizar"
-        android:textAllCaps="false" />
+        <Button
+            android:id="@+id/btn_insertar_nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Insertar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_eliminar_nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Eliminar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_actualizar_nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Actualizar"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btn_consultar_nota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="lanzarActividad"
+            android:text="Consultar"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
 </RelativeLayout>

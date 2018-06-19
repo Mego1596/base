@@ -30,7 +30,6 @@ public class InsertarTabla1 extends AppCompatActivity implements Response.ErrorL
         codigoMateria = (EditText) findViewById(R.id.editCodigo);
         nombreMateria = (EditText) findViewById(R.id.editNombreMateria);
         unidadesValorativas = (EditText) findViewById(R.id.editUV);
-
         request = Volley.newRequestQueue(getApplicationContext());
     }
 

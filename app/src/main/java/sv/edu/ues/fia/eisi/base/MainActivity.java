@@ -19,32 +19,41 @@ public class MainActivity extends Activity {
 
         switch(v.getId()){
 
-            case R.id.btn_insert_materia:
+            case R.id.btn_insertar_materia:
                 i = new Intent(this, InsertarTabla1.class);
                 break;
-            case R.id.btn_delete_materia:
+            case R.id.btn_eliminar_materia:
                 i = new Intent(this,EliminarTabla1.class);
                 break;
-            case R.id.btn_update_materia:
+            case R.id.btn_actualizar_materia:
                 i = new Intent(this,ActualizarTabla1.class);
                 break;
-            case R.id.btn_insert_alumno:
+            case R.id.btn_consultar_materia:
+                i = new Intent(this,ConsultarTabla1.class);
+                break;
+            case R.id.btn_insertar_alumno:
                 i = new Intent(this, InsertarTabla2.class);
                 break;
-            case R.id.btn_delete_alumno:
+            case R.id.btn_eliminar_alumno:
                 i = new Intent(this,EliminarTabla2.class);
                 break;
-            case R.id.btn_update_alumno:
+            case R.id.btn_actualizar_alumno:
                 i = new Intent(this,ActualizarTabla2.class);
                 break;
-            case R.id.btn_insert_nota:
+            case R.id.btn_consultar_alumno:
+                i = new Intent(this,ConsultarTabla2.class);
+                break;
+            case R.id.btn_insertar_nota:
                 i = new Intent(this, InsertarTabla3.class);
                 break;
-            case R.id.btn_delete_nota:
+            case R.id.btn_eliminar_nota:
                 i = new Intent(this,EliminarTabla3.class);
                 break;
-            case R.id.btn_update_nota:
+            case R.id.btn_actualizar_nota:
                 i = new Intent(this,ActualizarTabla3.class);
+                break;
+            case R.id.btn_consultar_nota:
+                i = new Intent(this,ConsultarTabla3.class);
                 break;
         }
 

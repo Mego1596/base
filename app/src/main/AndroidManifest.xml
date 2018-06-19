@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="sv.edu.ues.fia.eisi.base">
-<uses-permission android:name="android.permission.INTERNET"/>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -24,7 +26,10 @@
         <activity android:name=".ActualizarTabla2" />
         <activity android:name=".InsertarTabla3" />
         <activity android:name=".EliminarTabla3" />
-        <activity android:name=".ActualizarTabla3"></activity>
+        <activity android:name=".ActualizarTabla3" />
+        <activity android:name=".ConsultarTabla1" />
+        <activity android:name=".ConsultarTabla2" />
+        <activity android:name=".ConsultarTabla3"></activity>
     </application>
 
 </manifest>
